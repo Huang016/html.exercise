@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            background-color: white;
+            padding: 50px;
+        }
+
+        .main-container {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 20px;
+            max-width: 800px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .float {
+            float: right;
+            width: 150px;
+            height: 180px;
+            border: 3px solid green;
+            padding: 10px;
+            overflow: auto; 
+            background-color: white;
+        }
+
+        /* 蓝色边框的行内块 */
+        .love {
+            display: inline-block;
+            border: 2px solid blue;
+            background-color: yellow;
+            padding: 2px 8px;
+            margin: 0 5px;
+            vertical-align: center; 
+            font-weight: normal;
+        }
+
+        p {
+            margin: 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="float">
+            A float div with overflow auto. A float div with overflow auto. 
+            A float div with overflow auto. A float div with overflow auto.
+            A float div with overflow auto.
+        </div>
+
+        <p>
+            (Just long sentence.) Let me not to the marriage of 
+            true minds Admit impediments. 
+            <span class="love">Love</span> is not love 
+            Which alters when it alteration finds, Or bends with 
+            the remover to remove: O, no! it is an ever-fix'ed 
+            mark, That looks on tempests and is never shaken; It 
+            is the star to every wand'ring bark, Whose worth's 
+            unknown, although his heighth be taken. 
+            <span class="love">Love's</span> not 
+            Time's fool, though rosy lips and cheeks Within his bending sickle's 
+            compass come; <span class="love">Love</span> alters not with 
+            his brief hours and weeks, But bears it out even to the edge of doom: 
+            If this be error and upon me proved, I never writ, nor no man ever loved.
+        </p>
+    </div>
+
+</body>
+</html>
