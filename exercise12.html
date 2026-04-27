@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 圖片處理與動畫實作</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+        .section {
+            margin-bottom: 50px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .img-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .img-box {
+            text-align: center;
+            width: 33%;
+        }
+
+        .img-left {
+            width: 100%;       
+            height: 300px;
+            border-radius: 18px;
+            object-fit: cover; 
+            display: block;
+        }
+
+        .img-middle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; 
+            border: 1px solid #333;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .img-right {
+            width: 100%;
+            height: 300px;
+            object-fit: fill;
+            display: block;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="section">
+        <div class="img-container">
+            <div class="img-box">
+                <p>No Distortion (Radius 18px)</p>
+                <img src="https://picsum.photos/id/1011/400/600" class="img-left" alt="左圖">
+            </div>
+
+            <div>
+                <p>Circle (150px)</p>
+                <img src="https://picsum.photos/id/1015/300/300" class="img-middle" alt="中圖">
+            </div>
+
+            <div class="img-box">
+                <p>Distortion </p>
+                <img src="https://picsum.photos/id/1011/400/600" class="img-right" alt="右圖">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
