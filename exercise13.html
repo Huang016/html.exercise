@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>響應式佈局實作</title>
+    <style>
+        /* 全域初始化 */
+        * {
+            box-sizing: border-box; /* 確保寬度計算包含邊框 */
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #55b2ff; /* 背景藍色 */
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* 主容器 */
+        .main-card {
+            background-color: white;
+            width: 100%;
+            max-width: 600px;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column; /* 整體垂直排列 */
+            gap: 15px;
+        }
+
+        /* 頂部大區塊 (綠色) */
+        .header-box {
+            background-color: #b3d943;
+            height: 150px;
+            width: 100%;
+        }
+
+        /* 中間區塊容器 (青色) */
+        .content-group {
+            display: flex;
+            flex-direction: row; /* 預設橫向排列 (圖 b) */
+            gap: 10px;
+        }
+
+        .content-item {
+            background-color: #00bcd4;
+            flex: 1; /* 平分空間 */
+            height: 120px;
+        }
+
+        /* 底部小區塊容器 (灰色) */
+        .footer-group {
+            display: flex;
+            flex-wrap: wrap; /* 超出時換行 */
+            gap: 10px;
+        }
+
+        .footer-item {
+            background-color: #eceff1;
+            flex: 1;
+            min-width: 80px;
+            height: 50px;
+        }
+
+        /* --- 關鍵：響應式媒體查詢 (圖 a) --- */
+        @media (max-width: 480px) {
+            .content-group {
+                flex-direction: column; /* 寬度小於 480px 時改為垂直排列 */
+            }
+
+            .content-item {
+                height: 60px; /* 手機版時高度可微調縮小 */
+            }
+
+            .footer-item {
+                flex-basis: 40%; /* 讓底部小格變成兩兩一組 */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-card">
+        <div class="header-box"></div>
+
+        <div class="content-group">
+            <div class="content-item"></div>
+            <div class="content-item"></div>
+            <div class="content-item"></div>
+        </div>
+
+        <div class="footer-group">
+            <div class="footer-item"></div>
+            <div class="footer-item"></div>
+            <div class="footer-item"></div>
+            <div class="footer-item"></div>
+        </div>
+    </div>
+
+</body>
+</html>
