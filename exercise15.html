@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Object Exercise</title>
+</head>
+<body>
+
+<h2>Original Object Properties</h2>
+<p id="before"></p>
+
+<h2>After Deleting age Property</h2>
+<p id="after"></p>
+
+<script>
+    // Create object
+    var Person = {
+        firstName: "Tony",
+        lastName: "Lee",
+        age: 50,
+        eyeColor: "Blue"
+    };
+
+    // List all properties
+    let text1 = "";
+
+    for (let key in Person) {
+        text1 += key + " : " + Person[key] + "<br>";
+    }
+
+    document.getElementById("before").innerHTML = text1;
+
+    // Delete age property
+    delete Person.age;
+
+    // Print object after deleting
+    let text2 = "";
+
+    for (let key in Person) {
+        text2 += key + " : " + Person[key] + "<br>";
+    }
+
+    document.getElementById("after").innerHTML = text2;
+</script>
+
+</body>
+</html>
